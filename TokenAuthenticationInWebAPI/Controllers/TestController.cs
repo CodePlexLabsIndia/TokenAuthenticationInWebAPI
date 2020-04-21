@@ -38,7 +38,7 @@
             var roles = identity.Claims
                         .Where(c => c.Type == ClaimTypes.Role)
                         .Select(c => c.Value);
-            return Ok("Hello " + identity.Name + "Your Role(s) are: " + string.Join(",", roles.ToList()));
+            return Ok("Hello There, " + identity.Name + "Your Role(s) are: " + string.Join(",", roles.ToList()));
         }
     }
 }
